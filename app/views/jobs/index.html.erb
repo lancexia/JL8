@@ -1,4 +1,6 @@
 
+<table>
+
 
 <div class="dropdown clearfix pull-right">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -53,5 +55,8 @@
         </tr>
         <% end %>
     </tbody> -->
+    <div class="page">
+    <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
+    </div>
 
 </table>
