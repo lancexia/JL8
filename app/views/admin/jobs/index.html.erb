@@ -13,14 +13,12 @@
             <td>公司地址</td>
 
             <td>
-              收到履历数量
+              收到履历数
             </td>
             <td>
-                薪资下限
+                薪资区间
             </td>
-            <td>
-                薪资上限
-            </td>
+
             <td>
                 管理选项
             </td>
@@ -40,8 +38,8 @@
         </td>
         <td><%= job.location %></td>
         <td> <%= link_to(job.resumes.count) %> </td>
-        <td> <%= job.wage_lower_bound %> </td>
-        <td> <%= job.wage_upper_bound %> </td>
+        <td> <%= job.wage_lower_bound %> ～ <%= job.wage_upper_bound %>¥ </td>
+
         <td>
             <%= link_to("Edit", edit_admin_job_path(job)) %>
             |
