@@ -20,8 +20,10 @@
     </ul>
 </div>
 
+<%= render :partial => "jobs_item", :collection =>@jobs, :as => :job %>
 
-<table class="table table-boldered">
+
+<!-- <table class="table table-boldered">
     <thead>
         <tr>
             <td>
@@ -50,6 +52,6 @@
             </td>
         </tr>
         <% end %>
-    </tbody>
+    </tbody> -->
 
 </table>
