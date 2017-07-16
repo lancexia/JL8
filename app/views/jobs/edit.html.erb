@@ -1,14 +1,24 @@
-<h1> Edit a job </h1>
 
-<%= simple_form_for @job do |f| %>
 
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_upper_bound, :label => "最低工资" %>
-<%= f.input :wage_lower_bound, :label => "最高工资" %>
-<%= f.input :location, :label => "地点" %>
-<%= f.input :contact_email %>
-<%= f.input :is_hidden %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">  <h2>Add a job
 
-  <%= f.submit "Submit" %>
-<% end %>
+      <%= link_to("back", admin_jobs_path, :class => "btn btn-default")%></h2></h2>
+
+  </div>
+  <div class="panel-body">
+    <%= simple_form_for @job do |f| %>
+
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :wage_upper_bound, :label => "最低工资" %>
+    <%= f.input :wage_lower_bound, :label => "最高工资" %>
+    <%= f.input :location, :label => "地点" %>
+    <%= f.input :contact_email %>
+    <%= f.input :is_hidden %>
+
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</div>
